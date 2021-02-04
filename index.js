@@ -64,7 +64,7 @@ function App() {
 
     return (
     // drumpad display
-    <div className="bg-primary min-vh-100 container-fluid" id="display">
+    <div className="bg-info min-vh-100 container-fluid" id="display">
         <div>
             <h2 className="text-center">Drum Machine by JEppehimer</h2>
             <div className="row">
@@ -143,7 +143,7 @@ function Pad({clip, volume, setDescription}) {
 
   // return single drum pad element containing audio from bank
   return (
-    <div id={clip.id} onClick={playAudio} className={`drum-pad btn btn-secondary p-4 m-2 col-3 ${active && "btn-warning"}`}>
+    <div id={clip.id} onClick={playAudio} className={`drum-pad btn btn-secondary bg-dark p-4 m-2 col-3 ${active && "btn-warning bg-white"}`}>
       <audio className="clip" id={clip.keyTrigger} src={clip.url} />
       {clip.keyTrigger}
     </div>
